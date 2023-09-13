@@ -1,3 +1,5 @@
+$black:"#000";
+$white:"#FFF";
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +9,12 @@
     font-size: 15px;
     font-family: 'Roboto Flex', sans-serif;
     font-style: normal;
-    color: #000;
+    color: $black;
+}
+@mixin font($fs,$fw,$lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
 }
 .d-f{
     display: flex;
@@ -24,12 +31,7 @@
         gap: 50px;
         align-items: center;
         &--item{
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 20px;
-            font-weight: 400;
-            line-height: 20px
+            @include font(15px,400,20px);
         }
     }
 }
@@ -37,16 +39,14 @@
     gap: 10px;
     .btn{
         text-align: center;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 35px;
+        @include font(16px,600,35px);
         border: 1px solid rgba(0, 0, 0, 0.50);
         background-color: transparent;
         max-width: 120px;
         padding: 5px 25px;
         &--orenge{
             background: #FF6336;
-            color: #FFF;
+            color: $white;
             border-color: #FF6336;
         }
     }
@@ -58,14 +58,10 @@
         flex-direction: column;
         gap: 50px;
         &--h1{
-            font-size: 65px;
-            font-weight: 600;
-            line-height: 70px;
+            @include font(65px,600 ,70px );
         }
         &--text{
-            font-size: 25px;
-            font-weight: 400;
-            line-height: 35px;
+            @include font(25px,400 ,35px );
         }
         &--btn-end{
             flex-direction: column;
@@ -83,9 +79,7 @@
         }
     }
     &__end{
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 25px;
+        @include font(15px,400 ,25px );
     }
 }
 .companies{
@@ -98,9 +92,7 @@
         gap: 70px;
     }
     &__h1{
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 60px; 
+        @include font(50px,600 60px, );
         padding-left: 35%;
         padding-right: 25%;
     }
@@ -148,25 +140,17 @@
     }
 }
 .text--h1{
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 60px; 
+    @include font(50px,600 ,60px );
 }
 .text--h2{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
+    @include font(20px,400 ,30px );
 }
 span{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
+    @include font(20px,400 ,30px );
     text-decoration-line: underline;
 }
 .text--h3{
-font-size: 20px;
-font-weight: 600;
-line-height: 30px;
+@include font(20px,600 ,30px );
 }
 .localize{
     background: #FFF8E4;
@@ -189,9 +173,7 @@ line-height: 30px;
                 max-width: 330px;
                 align-items: center;
                 .text--h4{
-                    font-size: 25px;
-                    font-weight: 600;
-                    line-height: 35px; 
+                    @include font(25px,600 ,35px );
                 }
             }
         }
@@ -217,9 +199,7 @@ line-height: 30px;
         max-height: 183px;
     }
     &--name{
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 40px;
+        @include font(30px,600 ,40px );
     }
     &__items{
         &--block{
@@ -248,15 +228,11 @@ line-height: 30px;
         gap: 23px;
         padding-top: 20px;
         &--h1{
-            font-size: 30px;
-            font-weight: 400;
-            line-height: 40px;
+            @include font(30px,400 ,40px );
         }
         &--h2{
             flex-direction: column;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 25px;
+            @include font(15px,400 ,25px );
             padding: 0px 623px 15px 0px;
         }
     }
@@ -265,12 +241,10 @@ line-height: 30px;
     background: #DABC98;
     padding: 70px 76px 84px 74px;
     &__1{
-        border-right: 1px solid #000;
+        border-right: 1px solid $black;
         gap: 67px;
         &--name{
-            font-size: 35px;
-            font-weight: 600;
-            line-height: 50px;
+            @include font(35px,600 ,50px );
             padding-right: 125px;
         }
     }
@@ -281,9 +255,7 @@ line-height: 30px;
             flex-direction: column;
             gap: 17px;
             &--name{
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 25px;
+                @include font(15px,400 ,25px );
                 letter-spacing: 0.75px;
             }
         }
@@ -303,15 +275,11 @@ line-height: 30px;
         flex-direction: column;
         align-items: center;
         &--1{
-            font-size: 65px;
-            font-weight: 600;
-            line-height: 75px;    
+            @include font(65px,600 ,75px );
             max-width: 790px;      
         }
         &--2{
-            font-size: 25px;
-            font-weight: 400;
-            line-height: 30px;    
+            @include font(25px,400 ,30px );   
             max-width: 539px;        
         }
     }
@@ -338,19 +306,15 @@ line-height: 30px;
         flex-direction: column;
         gap: 30px;
         &--1{
-            font-size: 65px;
-            font-weight: 600;
-            line-height: 75px;
+            @include font(65px,600 ,75px );
         }
     }
     .btn-conteiner{
         .btn--black{
-            background: #000;
-            color: #FFF;
-            font-size: 17px;
-            font-weight: 600;
+            background: $black;
+            color: $white;
+            @include font(17px,600 ,60px );
             padding: 0px 23px;
-            line-height: 60px;
         }
     }
 }
@@ -361,14 +325,12 @@ line-height: 30px;
     &__list{
         justify-content: space-between;
         padding-bottom: 92px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $black;
         &__start{
             flex-direction: column;
             gap: 30px;
             &--name{
-                font-size: 40px;
-                font-weight: 600;
-                line-height: 50px;
+                @include font(40px,600 ,50px );
             }
             &--end{
                 flex-direction: column;
@@ -383,19 +345,14 @@ line-height: 30px;
             padding-bottom: 15px;
             .list__categori{
                 &--name{
-                    font-size: 20px;
-                    font-weight: 600;
-                    line-height: 25px;
+                    @include font(20px,600 ,25px )
                 }
                 &--text{
                     flex-direction: column;
                     gap: 15px;
                     max-width: 187px;
                     li{
-                        font-size: 15px;
-                        font-weight: 400;
-                        line-height: 15px;
-                        
+                        @include font(15px,400 ,15px );
                     }
                 }
                 .padding-1{
@@ -425,7 +382,5 @@ line-height: 30px;
     }
 }
 .frame__end--text{
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15px;
+    @include font(12px,400 ,15px );
 }
