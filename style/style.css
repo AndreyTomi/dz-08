@@ -225,6 +225,9 @@ span {
   font-weight: 600;
   line-height: 40px;
 }
+.boost__items {
+  gap: 30px;
+}
 .boost__items--block {
   flex-direction: column;
   gap: 55px;
@@ -232,7 +235,6 @@ span {
 .boost__items--block .boost__text-conteiner {
   flex-direction: column;
   gap: 30px;
-  padding-right: 30px;
 }
 
 .interview {
@@ -348,8 +350,8 @@ span {
   color: #FFF;
   font-size: 17px;
   font-weight: 600;
-  padding: 0px 23px;
   line-height: 60px;
+  padding: 0px 23px;
 }
 
 .frame {

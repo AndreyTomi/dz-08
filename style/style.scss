@@ -1,5 +1,5 @@
-$black:"#000";
-$white:"#FFF";
+$black:#000;
+$white:#FFF;
 *{
     margin: 0;
     padding: 0;
@@ -92,7 +92,7 @@ $white:"#FFF";
         gap: 70px;
     }
     &__h1{
-        @include font(50px,600 60px, );
+        @include font(50px,600 ,60px );
         padding-left: 35%;
         padding-right: 25%;
     }
@@ -202,13 +202,13 @@ span{
         @include font(30px,600 ,40px );
     }
     &__items{
+        gap: 30px;
         &--block{
             flex-direction: column;
             gap: 55px;
             .boost__text-conteiner{
                 flex-direction: column;
                 gap: 30px;
-                padding-right: 30px;
             }
         }
     }
